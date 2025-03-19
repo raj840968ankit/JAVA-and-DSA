@@ -24,15 +24,15 @@ public class ninjaTrainingTabulation {
         dp[0][2] = Math.max(arr[0][0], arr[0][1]);
         dp[0][3] = Math.max(arr[0][0], Math.max(arr[0][1], arr[0][2])); //if day = 1 is given in question then consider all three
         for(int Day = 1; Day < day; Day++){
-            for(int task = 0; task < lastTask + 1; task++){
+            for(int last = 0; last < lastTask + 1; last++){
                 int maxi = 0;
                 for(int i = 0; i < 3 ; i++){
-                  if(i != task){
+                  if(i != last){
                       int maxMerit = arr[Day][i] + dp[Day - 1][i];
                       maxi = Math.max(maxi, maxMerit);
                   }
                 }
-                dp[Day][task] = maxi;
+                dp[Day][last] = maxi;
             }
         }
         System.out.println(dp[day - 1][lastTask]);
