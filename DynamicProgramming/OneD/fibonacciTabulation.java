@@ -2,9 +2,10 @@
 
 /*.....................Memoization to Tabulation.................................
   1) Identify the base case and initialize in DP array because it is bottom-up approach
-  2) Look for the recursion call range (from where to where)
-     2.1) Declare a for loop (from where to where)
-     2.2) Replace recursion calls with DP array and leave everything same
+  2) it is obvious that 1D DP has 1 parameter changing in recursion then always follow:-
+     2.1) there will be 1 loop for dp array only for corresponding changing parameter and that loop will run from (baseCase < i < n).
+        2.1.1) rest of the things will be copied same as recursion function.
+        2.1.2) Replace recursion calls with DP array and leave everything same
  */
 
 public class fibonacciTabulation {
