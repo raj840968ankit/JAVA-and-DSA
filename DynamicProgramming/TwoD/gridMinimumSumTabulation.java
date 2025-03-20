@@ -11,6 +11,9 @@ public class gridMinimumSumTabulation {
         for(int i = 0; i < m; i++){
             for(int j = 0; j < n; j++){
                 if(i == 0 && j == 0) continue;
+                /*if i == 0 || j == 0 then we can't perform operation of up and down
+                 so that's why we will store max value at that time as we were doing in memoization base case
+                */
                 int up = Integer.MAX_VALUE;
                 if(i > 0){
                     up = dp[i - 1][j];
