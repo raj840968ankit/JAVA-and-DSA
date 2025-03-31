@@ -3,7 +3,7 @@ package DynamicProgramming.DpOnSubsequences;
 public class subsetSumEqualKMemoization {
     public static boolean existSum(int i, int sum, int[] arr, Boolean[][] dp){
         if(sum == 0) return true;
-        if(i < 0) return false;
+        if(i == 0) return (sum - arr[i] == 0);
         if(dp[i][sum] != null) return dp[i][sum];
         if(sum >= arr[i]){
             if(existSum(i - 1, sum - arr[i], arr, dp)){
