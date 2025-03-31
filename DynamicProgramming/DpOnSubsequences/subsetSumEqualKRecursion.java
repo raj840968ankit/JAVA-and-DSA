@@ -2,8 +2,8 @@ package DynamicProgramming.DpOnSubsequences;
 
 public class subsetSumEqualKRecursion {
     public static boolean existSum(int i, int sum, int[] arr){
-        if(i < 0) return false;
         if(sum == 0) return true;
+        if(i < 0) return false;
         if(sum >= arr[i]){
             if(existSum(i - 1, sum - arr[i], arr)){
                 return true;
