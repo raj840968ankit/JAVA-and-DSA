@@ -19,7 +19,7 @@ public class subsetSumEqualKSpaceOptimization {
         for(int i = 1; i < n; i++){
             boolean[] curr = new boolean[sum + 1];
             // Set base case for curr: a subset sum of 0 is always achievable.
-            curr[0] = true;
+            curr[0] = true;  //true because target 0 will always give true
             for(int target = 1 ; target < sum + 1; target++){
                 boolean take = false;
                 if(target >= arr[i]){
