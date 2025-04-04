@@ -1,6 +1,7 @@
 package StringsCodeWithMik;
 
 public class stringCompression1 {
+    //here in class name "1" is showing question first of string
     public static void main(String[] args) {
         char chars[] = {'a','a','b','b','c','c','c'};
         StringBuilder sb = new StringBuilder("");
