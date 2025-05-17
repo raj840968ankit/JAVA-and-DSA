@@ -2,7 +2,7 @@ package StringsCodeWithMik.Medium;
 
 import java.util.*;
 
-//..........Without creating a pair class sorting using comparator in list.................
+//..........Without creating a pair class, sorting using comparator in list.................
 
 public class WithoutPairClassSortCharacterByFrequency {
     public static String frequencySort(String s) {
