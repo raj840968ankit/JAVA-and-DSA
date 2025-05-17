@@ -18,8 +18,8 @@ public class WithoutPairClassSortCharacterByFrequency {
         }
         //sorting using comparator in list
         List<Character> list = new ArrayList<>(map.keySet());
-        list.sort((ch1, ch2) -> { 
-            return map.get(ch2) - map.get(ch1);
+        Collections.sort(list, (ch1, ch2) -> { 
+            return Integer.compare(map.get(ch2), map.get(ch1));
         });
         
         StringBuilder sb = new StringBuilder("");
