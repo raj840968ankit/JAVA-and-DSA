@@ -1,4 +1,4 @@
-package StringsCodeWithMik;
+package StringsCodeWithMik.Easy;
 
 public class stringPangram2 {
     //Question states that "a pangram is a sentence that contains every letter of alphabet at least once"

@@ -1,4 +1,4 @@
-package StringsCodeWithMik;
+package StringsCodeWithMik.Easy;
 
 public class stringCompression1 {
     //here in class name "1" is showing question first of string
