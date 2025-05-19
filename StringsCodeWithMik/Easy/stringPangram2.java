@@ -1,5 +1,5 @@
 package StringsCodeWithMik.Easy;
-
+//leetcode 1832
 public class stringPangram2 {
     //Question states that "a pangram is a sentence that contains every letter of alphabet at least once"
     public static void main(String[] args) {

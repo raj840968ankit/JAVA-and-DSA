@@ -2,7 +2,7 @@ package StringsCodeWithMik.Easy;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-
+//Striver Playlist
 public class IsomorphicString {
     public static boolean isIsomorphic(String s, String t) {
         if(s.length() != t.length()){

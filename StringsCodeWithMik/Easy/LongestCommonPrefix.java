@@ -1,7 +1,7 @@
 package StringsCodeWithMik.Easy;
 
 import java.util.Arrays;
-
+//Striver Playlist
 public class LongestCommonPrefix {
     public static String longestCommonPrefix(String[] strs) {
         if(strs.length < 1){

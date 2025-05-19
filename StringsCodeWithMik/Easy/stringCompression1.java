@@ -1,5 +1,5 @@
 package StringsCodeWithMik.Easy;
-
+//leetcode 443
 public class stringCompression1 {
     //here in class name "1" is showing question first of string
     public static void main(String[] args) {

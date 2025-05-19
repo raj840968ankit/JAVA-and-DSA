@@ -1,5 +1,5 @@
 package StringsCodeWithMik.Easy;
-
+//Striver Playlist
 public class CheckStringRotation {
     public static boolean rotateString(String s, String goal) {
         StringBuilder sb = new StringBuilder(s);

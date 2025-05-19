@@ -1,5 +1,5 @@
 package StringsCodeWithMik.Easy;
-
+//leetcode 38
 public class CountAndSay {
     public static String countAndSay(int n) {
         if(n == 1){
