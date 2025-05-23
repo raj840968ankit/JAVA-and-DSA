@@ -4,19 +4,29 @@ import java.util.Arrays;
 //Striver Playlist
 public class AnagramString {
     public static boolean isAnagram(String s, String t) {
-        char[] c1= s.toCharArray();
-        char[] c2= t.toCharArray();
-        Arrays.sort(c1);
-        Arrays.sort(c2);
-        if(c1.length==c2.length){
-            for(int i=0;i<c1.length;i++){
-                if(c1[i]!=c2[i]){
-                    return false;
-                }
-            }
-            return true;
+        if(s.length() != t.length()){
+            return false;
         }
-        return false;
+        int[] alphabets = new int[26];
+        //taking s string character and incrementing its value in hash array
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            alphabets[ch - 'a']++;
+        }
+
+        //taking t string character and decrementing it's value in hash array
+        for(int i = 0; i < t.length(); i++){
+            char ch = t.charAt(i);
+            alphabets[ch - 'a']--;
+        }
+
+        //checking hash array if it contains only 0 value then both strings are anagram
+        for(int i = 0; i < alphabets.length; i++){
+            if(alphabets[i] != 0){
+                return false;
+            }
+        }
+        return true;
     }
     public static void main(String[] args) {
         String s = "anagram", t = "nagaram";
