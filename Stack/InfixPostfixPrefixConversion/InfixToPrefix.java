@@ -64,6 +64,8 @@ public class InfixToPrefix {
                     }
                     stack.push(ch);
                 }
+                //here if similar priority encounter then push to the stack
+                //if priority is less than top then pop and add it to answer
                 else{
                     while(!stack.isEmpty() && priority(ch) < priority(stack.peek())){
                         sb.append(stack.pop());
