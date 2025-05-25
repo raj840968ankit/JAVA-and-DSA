@@ -28,7 +28,6 @@ public class cancelDuplicates {
         {
             a[i]=sc.nextInt();
         }
-        int b[]=checkDuplicate(a);
         System.out.print("non duplicate elements are : ");
         for(i=0;i<n;i++)
         {
