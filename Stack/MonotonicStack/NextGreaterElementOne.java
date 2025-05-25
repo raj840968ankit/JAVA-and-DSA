@@ -11,7 +11,7 @@ public class NextGreaterElementOne {
         //start looping in nums2 and arrange element in monotonic stack in desc order
         for(int i = 0; i < nums2.length; i++){
             // Maintain decreasing order in the stack
-            while(!stack.isEmpty() && nums2[i] > stack.peek()){
+            while(!stack.isEmpty() && nums2[i] >= stack.peek()){
                 map.put(stack.pop(), nums2[i]);
             }
             stack.push(nums2[i]);
