@@ -9,7 +9,7 @@ public class NextGreaterElementGFG {
 
         for(int i = arr.length - 1; i >= 0; i--){
             //maintaining desc order in monotonic stack
-            while(!stack.isEmpty() && arr[i] > stack.peek()){
+            while(!stack.isEmpty() && arr[i] >= stack.peek()){
                 stack.pop();
             }
 
