@@ -86,17 +86,42 @@ public class TreeTraversal {
         List<Integer> list = new ArrayList<>();
         ArrayDeque<Node> stack = new ArrayDeque<>();
         Node node = root;
-        while (true) {
+        while (node != null || !stack.isEmpty()) {
             if (node != null) {
                 stack.push(node);
                 node = node.left;
             } else {
-                if (stack.isEmpty()) {
-                    break;
-                }
                 node = stack.pop();
                 list.add(node.data);
                 node = node.right;
+            }
+        }
+        return list;
+    }
+
+    List<Integer> iterativePostOrderTraversal() {
+        List<Integer> list = new ArrayList<>();
+        ArrayDeque<Node> stack = new ArrayDeque<>();
+        Node curr = root;
+        Node temp = null;
+        while (curr != null || !stack.isEmpty()) {
+            if(curr != null){
+                stack.push(curr);
+                curr = curr.left;
+            }
+            else{
+                temp = stack.peek().right;
+                if(temp == null){
+                    temp = stack.pop();
+                    list.add(temp.data);
+                    while(!stack.isEmpty() && temp == stack.peek().right){
+                        temp = stack.pop();
+                        list.add(temp.data);
+                    }
+                }
+                else{
+                    curr = temp;
+                }
             }
         }
         return list;
@@ -127,15 +152,19 @@ public class TreeTraversal {
         System.out.println();
 
         System.out.println("Level Order Traversal : ");
-        System.out.println(binaryTree.levelOrderTraversal());
+        System.out.print(binaryTree.levelOrderTraversal());
         System.out.println();
 
         System.out.println("Iterative PreOrder Traversal : ");
-        System.out.println(binaryTree.iterativePreorderTraversal());
+        System.out.print(binaryTree.iterativePreorderTraversal());
         System.out.println();
 
         System.out.println("Iterative InOrder Traversal : ");
-        System.out.println(binaryTree.iterativeInOrderTraversal());
+        System.out.print(binaryTree.iterativeInOrderTraversal());
+        System.out.println();
+
+        System.out.println("Iterative PostOrder Traversal : ");
+        System.out.print(binaryTree.iterativePostOrderTraversal());
         System.out.println();
     }
 }
